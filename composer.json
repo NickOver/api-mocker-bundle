@@ -10,7 +10,11 @@
     }
   ],
   "require": {
-    "php": ">=8.0"
+    "php": ">=8.0",
+    "symfony/http-kernel": ">=v5.0.0",
+    "symfony/dependency-injection": "^v5.0.0",
+    "symfony/config": "^v5.0.0",
+    "symfony/routing": "^v5.0.0"
   },
   "autoload": {
     "psr-4": {

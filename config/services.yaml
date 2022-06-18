@@ -1,0 +1,11 @@
+services:
+  nickover_api_mocker.api_mocker:
+    class: NickOver\ApiMockerBundle\ApiMocker\ApiMocker
+    autowire: true
+
+  nickover_api_mocker.exception_listener:
+    class: NickOver\ApiMockerBundle\EventListener\ExceptionListener
+    arguments:
+      - '@nickover_api_mocker.api_mocker'
+    tags:
+      - { name: kernel.event_listener, event: kernel.exception }
